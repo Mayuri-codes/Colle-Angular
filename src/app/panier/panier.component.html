@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Produit</th>
+          <th scope="col">Prix</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="panier.length > 0; else panierVide">
+        <tr *ngFor="let produit of panier; let i = index">
+          <td class="produit-cell">
+            <img [src]="produit.image" alt="{{ produit.nom }}" class="img-thumbnail">
+            <span>{{ produit.nom }}</span>
+          </td>
+          <td>{{ produit.prix | currency }}</td>
+          <td>
+            <!-- Vous pouvez ajouter ici d'autres actions comme modifier, voir détails, etc. -->
+            <button class="btn btn-warning" (click)="retirerDuPanier(i)">Retirer du Panier</button>
+          </td>
+        </tr>
+      </tbody>
+      <ng-template #panierVide>
+        <tbody>
+          <tr>
+            <td colspan="3" class="text-center">Votre panier est vide</td>
+          </tr>
+        </tbody>
+      </ng-template>
+    </table>
+  </div>
+  

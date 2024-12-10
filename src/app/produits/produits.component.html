@@ -1,0 +1,16 @@
+<div class="container mt-4">
+    <div class="card" *ngFor="let produit of produits">
+      <!-- Entête de la carte avec l'image liée à chaque produit -->
+      <header class="card-header">
+        <img [src]="produit.image" alt="{{ produit.nom }}" class="card-img">
+      </header>
+  
+      <!-- Corps de la carte -->
+      <div class="card-body">
+        <h5 class="card-title">{{ produit.nom }}</h5>
+        <p class="card-text">{{ produit.prix | currency }}</p>
+        <button class="btn" (click)="ajouterAuPanier(produit)">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+  

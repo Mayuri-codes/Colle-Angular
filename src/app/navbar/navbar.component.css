@@ -1,0 +1,54 @@
+nav{
+    background-color: #1d182c;
+    color: white;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    
+    
+}
+
+.menu {
+    color: white;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+/*Button text volor and style*/
+ nav .menu a{
+    color: white  ;
+    border-style: hidden;
+    padding: 7px 13px;
+    text-decoration: none;
+    border-radius: 28px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    background: linear-gradient(to top right, #8023d7, #2970da);
+ }
+/*hover of buttons*/
+ nav .menu a:hover{
+    background: linear-gradient(to top right, #8023d7, #2970da);
+    transform: scale(1.1);
+ }
+
+nav .logo h1 span{
+    background: linear-gradient(to right, #7931bc, #2970da, #fbbf24); /* Gradient background for the icon */
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    
+}
+ .btn{
+    border-style: hidden;
+    padding: 7px 15px;
+    border-radius: 28px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, background 0.3s ease;
+    background: linear-gradient(to top right, #8023d7, #2970da);
+ }
+ .btn:hover{
+    background: linear-gradient(to top right, #8023d7, #2970da);
+    transform: scale(1.1);
+ }
